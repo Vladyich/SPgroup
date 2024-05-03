@@ -1,0 +1,138 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root{
+    --index: calc(1vw + 1vh);
+    --color-header: #3a0447;
+    --color-text: #600975;
+}
+
+@font-face {
+    font-family: raleway-c;
+    src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+    font-family: outfit-c;
+    src: url(../fonts/outfit-regular.woff2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: outfit-c;
+    
+}
+
+body{
+    /* background-color: antiquewhite; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* background-color: rgb(238, 216, 211); */
+    font-family: raleway-c;
+    overflow-x: hidden;
+    min-width: 320px;
+} 
+
+
+.wrapper{
+    z-index: 1;
+    /* background-image: url(../img/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.container{
+    padding: 0;
+    z-index: 1;
+
+}
+
+.main-title {
+    font-size: calc(var(--index)*9);
+    position: absolute;
+    line-height: 1.1;
+    /* left: 10vw;
+    top: 10vw;
+    margin-bottom: 10vw;
+    padding-bottom: 10vw; */
+    z-index: 10;
+}
+
+.main-menu{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 20% 1fr 25%;
+   width: calc(var(--index)*22);
+   height: calc(var(--index)*2.5);
+   /* font-size: calc(var(--index)*2); */
+   position: fixed;
+   /* left: 60vw;  */
+   align-content: right;
+   font-family: raleway-c;
+   text-transform: uppercase;
+   top: 3vh;
+   right: 3vw;
+   z-index: 11;
+   border-radius: 8px;
+   
+}
+
+.items {
+    display: flex;
+    padding: calc(var(--index)*20) 0;
+}
+
+.items> * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-item {
+    max-width: calc(var(--index)*24);
+    max-height: calc(var(--index)*30);
+    margin-bottom: calc(var(--index)*8);
+    border-radius: 8px;
+    
+}
+
+.text-item {
+    color: var(--color-text);
+    position: relative;
+    font-size: 3rem;
+}
+
+.text_item_header {
+    font-size: 4rem;
+    color: var(--color-header);
+}
+
+.text_item_text {
+    line-height: 4;
+}
+
+.container, .main-title, .text_item_header, .text_item_text, .item-right {
+    will-change: transform  ;
+}
+
+img {
+    box-shadow: 8px 10px 16px 0px rgba(65, 9, 62, 0.5)
+}
+
+/* #canvas {
+    z-index: -2;
+} */
+#canvas {
+    opacity: 0.3;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
