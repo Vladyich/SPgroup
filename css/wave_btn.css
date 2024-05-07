@@ -1,0 +1,49 @@
+.wave_btn {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+}
+
+
+
+.wave {
+background: antiquewhite;
+block-size: 20px 30px;
+height:50px;
+width: 400px;
+overflow: hidden;
+position: relative;
+display: inline-block;
+text-transform: uppercase;
+background-color: antiquewhite;
+font-weight: 900;
+color: rgb(104, 3, 90);
+}
+
+.wave:hover span {
+    position: relative;
+    display: inline-block;
+    /* padding-bottom: 10px; */
+    text-transform: uppercase;
+    animation: animate 0.3s ease-in-out;
+    animation-delay: calc(.035s*var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+    /* 40%, */
+    /* 100% {
+        transform: translateY(0px);
+    } */
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+   }
