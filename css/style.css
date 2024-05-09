@@ -62,19 +62,19 @@ body{
     z-index: 10;
 }
 
-.main-menu{
+.main_menu{
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 20% 1fr 25%;
-   width: calc(var(--index)*22);
+   width: calc(var(--index)*30);
    height: calc(var(--index)*2.5);
    /* font-size: calc(var(--index)*2); */
-   position: fixed;
+   position: absolute;
    /* left: 60vw;  */
    align-content: right;
    font-family: raleway-c;
    text-transform: uppercase;
-   top: 3vh;
+   top: 2vh;
    right: 3vw;
    z-index: 11;
    border-radius: 8px;

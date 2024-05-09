@@ -2,19 +2,26 @@
     display: flex;
     justify-content: center;
     height: 70px;
+    padding: 0;
+    margin: 0;
 }
 
-
+:root{
+    --index: calc(1vw + 1vh);
+}
 
 .wave {
 background: antiquewhite;
 block-size: 20px 30px;
-height:50px;
-width: 400px;
+height: calc(var(--index)*2);
+/* width: 400px; */
 overflow: hidden;
 position: relative;
 display: inline-block;
 text-transform: uppercase;
+padding-top: 16px;
+padding-right: 1px;
+padding-left: 1px;
 background-color: antiquewhite;
 font-weight: 900;
 color: rgb(104, 3, 90);
@@ -44,6 +51,6 @@ color: rgb(104, 3, 90);
 
 .btn {
     display: inline-block;
-    padding: 1rem 1.5rem;
+    padding: 1rem .5rem;  /* отступы в пунктах меню*/
     text-decoration: none;
    }
