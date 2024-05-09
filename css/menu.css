@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: sans-serif;
+    font-family: sans-serif;
     min-width: 320px;
 }
 
@@ -29,7 +29,8 @@ a {
     background-color: antiquewhite;
     /* z-index: 20; */
     border-radius: 8px;
-    opacity: .5;
+    opacity: .6;
+    
 }
 
 /* .menu {
@@ -112,10 +113,11 @@ width: 24px;
         height: calc(var(--index)*6);
     } */
     .main_menu{
+        font-weight: 600;
         display: grid;
         grid-auto-flow: row;
         grid-template-columns: 100%;
-        grid-template-rows: auto;
+        grid-template-rows: 40px 40px 40px;
         /* max-height: 0; */
         overflow: hidden;
         position: absolute;
@@ -124,15 +126,27 @@ width: 24px;
         right: 3vw;
         /* background-color: pink; */
         text-align: center;
-        height: calc(var(--index)*12);
-        width: calc(var(--index)*8);
+        height: calc(var(--index)*7);
+        width: calc(var(--index)*9);
         /* right: 0; */
         /* width: calc(var(--index)*22); */
         /* left: 50%; */
         /* margin-top: 20px; */
-       
+   
     }
-  
+
+    .main_menu div{
+        font-size: calc(var(--index)*0.9);
+    }
+
+    .wave{
+    height: calc(var(--index)*1.4);
+    padding-top: 5px;
+    }
+
+    .wave_btn {
+        height: 7vh;
+    }
 
     /* .menu li a {
         color: var(--color-text);
@@ -165,6 +179,6 @@ width: 24px;
 .fixMenu{
     position: fixed;
     z-index: 100;
-    /* top: 40px;
-  left: 450px; */
+    top: 0px;
+  /* left: 450px; */
     }
