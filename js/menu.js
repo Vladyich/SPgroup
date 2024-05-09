@@ -1,10 +1,21 @@
-
-
 window.addEventListener('scroll', e=> {
-    let mMenu = document.querySelector('.main_menu');
+   
     let activeMenu = 'fixMenu';
-    console.log(mMenu)
+    // console.log(mMenu)
     // console.log(activeMenu)
-if(scrollY > 100) mMenu.classList.add(activeMenu)
-    else mMenu.classList.remove(activeMenu)
+    let wrapper = document.querySelector('.wrapper');
+    let mMenu = document.querySelector('.main_menu');
+    let container = document.querySelector('.container');
+    if(scrollY > 150) {
+    // --------выводим блок с меню из блок плавного 
+    // скролинга в ктором меню не фиксируется
+    wrapper.before(mMenu);
+    // -----конец блока---------------------------
+    mMenu.classList.add(activeMenu)
+    }
+
+    else {
+        container.prepend(mMenu);
+        mMenu.classList.remove(activeMenu);
+        }
     })
